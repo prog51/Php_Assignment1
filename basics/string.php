@@ -11,7 +11,7 @@
 
 <h1>PHP  String Manipulation</h1>
   <?php
-     
+
      $phrase1 = "Student who came late";
      $phrase2 = "get forty lashes";
      $name = "Dilland Dickson";
@@ -32,7 +32,6 @@
 
      echo 'String lenght: ' . strlen($name) . '<br/>';
 
-  
 
   ?>
 </body>

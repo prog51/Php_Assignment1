@@ -10,7 +10,7 @@
 <body>
 
   <?php
-     
+
      $grade  = 'A';
     switch($grade)
       {
@@ -24,5 +24,6 @@
               echo '<h2 style="color:red;">You are a bum</h2>';
               break;
       }
+
   ?>
 </body>

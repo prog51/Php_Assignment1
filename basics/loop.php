@@ -10,6 +10,7 @@
 <body>
 
   <?php
+
       for($count = 0; $count< 8; $count++ )
         {
             echo "Power to the people.";
@@ -19,5 +20,7 @@
         {
             echo "Power to the people: " . $count;
         }
+
+
   ?>
 </body>

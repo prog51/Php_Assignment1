@@ -12,6 +12,7 @@
 <h1>While loop</h1>
   <?php
   
+
   $grade = 0;
 
   
@@ -32,5 +33,9 @@
         echo "<p>I am less the 20</p>";
         $grade++;
    }while($grade < 20)
+
+  
+   
   ?>
+
 </body>
