@@ -1,7 +1,8 @@
 <?php
 $title = 'Success';
-  require('includes/header.php');
+
   require 'db/conn.php';
+  require('includes/header.php');
 
   if(isset($_POST['submit']))
    {

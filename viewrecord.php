@@ -13,6 +13,7 @@ $title = 'Home';
       <th>Email</th>
       <th>Contact Number</th>
       <th>specialty</th>
+      <th>Action</th>
   </tr>
  <?php
 
@@ -36,7 +37,11 @@ $title = 'Home';
       <td><?php echo $email;  ?></td>
       <td><?php echo $contactnumber;  ?></td>
       <td><?php echo $specialty;  ?></td>
-      <td><a href="view.php?id=<?php echo $id ?>" class="btn btn-primary">View</a></td>
+      <td>
+        <a href="view.php?id=<?php echo $id ?>" class="btn btn-primary">VIEW</a>
+        <a href="edit.php?id=<?php echo $id ?>" class="btn btn-warning">EDIT</a>
+        <a onlick = "return confirm('Are sure you')" href="delete.php?id=<?php echo $id ?>" class="btn btn-danger">DELETE</a>
+      </td>
   </tr>
 <?php
 

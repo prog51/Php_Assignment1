@@ -41,7 +41,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="edit.php>Edit</a>
         </li>
       </ul>
       <form class="d-flex">

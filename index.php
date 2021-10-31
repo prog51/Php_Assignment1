@@ -9,27 +9,27 @@ $title = 'Home';
    <form method = "post" action="success.php" class="row g-3">
    <div class="col-md-6">
     <label for="inputfirtName4" class="form-label">First Name</label>
-    <input type="text" class="form-control" name = "fname" id="inputEmail4">
+    <input required type="text" class="form-control" name = "fname" id="inputEmail4">
   </div>
 
   <div class="col-md-6">
     <label for="inputLastName4" class="form-label">Last Name</label>
-    <input type="text" class="form-control" name = "lname" id="inputPassword4">
+    <input required type="text" class="form-control" name = "lname" id="inputPassword4">
   </div>
 
   <div class="col-md-6">
     <label for="email4" class="form-label">Email</label>
-    <input type="email" class="form-control" name = "email" id="inputEmail4">
+    <input required type="email" class="form-control" name = "email" id="inputEmail4">
   </div>
   
   <div class="col-md-6">
     <label for="inputZip" class="form-label">Date of Birth</label>
-    <input type="text" class="form-control" name="dob" id="dob">
+    <input required type="text" class="form-control" name="dob" id="dob">
   </div>
 
   <div class="col-md-6">
     <label for="inputZip" class="form-label">Contact</label>
-    <input type="text" class="form-control" name="contact" id="contact">
+    <input required type="text" class="form-control" name="contact" id="contact">
   </div>
 
   
@@ -49,7 +49,7 @@ $title = 'Home';
   </div>
   <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name = "agree" id="gridCheck">
+      <input required class="form-check-input" type="checkbox" name = "agree" id="gridCheck">
       <label class="form-check-label" for="gridCheck">
         Check me out
       </label>
