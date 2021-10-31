@@ -70,6 +70,7 @@ $title = 'Edit';
     </div>
   </div>
   <div class="col-12">
+    <a href="viewrecord.php" class="btn btn-default">Back to List</a>
     <button type="submit" name="submit" class="btn btn-success">Save Changes</button>
   </div>
 </form>
