@@ -1,9 +1,18 @@
 <?php
 
-   $host = '127.0.0.1';
+  /* 
+  ****This is for development purposes
+  $host = '127.0.0.1';
    $db = 'attendee_db';
    $user = 'root';
    $password = '';
+   $charset = 'uft8mb4';
+   */
+   
+   $host = 'remotemysql.com';
+   $db = 'b8D7YicFIR';
+   $user = 'b8D7YicFIR';
+   $password = '6GmFd4eKp8';
    $charset = 'uft8mb4';
 
    $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
