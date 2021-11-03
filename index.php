@@ -6,7 +6,7 @@ $title = 'Home';
 
    <h1>Register Today for our Conference</h1>
 
-   <form method = "post" action="success.php" class="row g-3">
+   <form method = "post" action="success.php" enctype="multipart/form-data" class="row g-3">
    <div class="col-md-6">
     <label for="inputfirtName4" class="form-label">First Name</label>
     <input required type="text" class="form-control" name = "fname" id="inputEmail4">
@@ -53,9 +53,17 @@ $title = 'Home';
       <label class="form-check-label" for="gridCheck">
         Check me out
       </label>
-    </div>
+    </div>   
   </div>
-  <div class="col-12">
+
+   <div class="col-md-12">      
+       <div class="custom-file">
+          <input type="file" accept="image/*" name = "avatar"  class ="custom-file-input"  id="avatar" >
+          <label class="custom-file-label" for="avatar">choose File</label>
+       </div>
+    </div>
+
+  <div class="col-md-12">
     <button type="submit" name="submit" class="btn btn-primary">SUBMIT</button>
   </div>
 </form>

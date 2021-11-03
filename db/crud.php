@@ -9,12 +9,12 @@
            $this->db = $conn;
        }
 
-       public function insert($fname, $lname, $dob, $email, $contact, $specialty)
+       public function insert($fname, $lname, $dob, $email, $contact, $specialty, $destination)
        {
            try
            {
             //create insert statement
-             $query = "INSERT INTO attendee (firstname,lastname,DOB,email,contactnumber,specialty_id) VALUES (:fname,:lname, :dob, :email, :contact, :specialty)";
+             $query = "INSERT INTO attendee (firstname,lastname,DOB,email,contactnumber,specialty_id,avatar_path) VALUES (:fname,:lname, :dob, :email, :contact, :specialty,:avatar)";
              
              //prepare sql statement for execution
              $stmt = $this->db->prepare($query);
@@ -26,6 +26,7 @@
              $stmt->bindparam(':email', $email);
              $stmt->bindparam(':contact',$contact);
              $stmt->bindparam(':specialty',$specialty);
+             $stmt->bindparam(':avatar',$destination);
 
              //execute parameter
              $stmt->execute();

@@ -15,7 +15,15 @@ $title = 'Success';
 
      // (:fname,:lname, :dob, :contact, :specialty)
 
-      $isSuccess = $crud->insert($fname,$lname,$dob,$email,$contact,$specialties);
+     $orig_file = $_FILES["avatar"]["tmp_name"];
+     $target_dir = "upload/";
+     $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+     $destination = "$target_dir$contact.$ext";
+
+     move_uploaded_file($orig_file,$destination);
+
+
+      $isSuccess = $crud->insert($fname,$lname,$dob,$email,$contact,$specialties,$destination);
    }
    else
    {
@@ -38,7 +46,7 @@ $title = 'Success';
     ?>
 
   <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="<?php echo $destination; ?>" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title"><?php echo $_POST['fname']; ?></h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

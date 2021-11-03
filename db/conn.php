@@ -1,13 +1,13 @@
 <?php
 
-  /* 
-  ****This is for development purposes
-  $host = '127.0.0.1';
+
+  //****This is for development purposes
+  /*$host = '127.0.0.1';
    $db = 'attendee_db';
    $user = 'root';
    $password = '';
-   $charset = 'uft8mb4';
-   */
+   $charset = 'uft8mb4';*/
+
    
    $host = 'remotemysql.com';
    $db = 'b8D7YicFIR';
@@ -28,7 +28,11 @@
      }
 
      require_once 'crud.php';
+     require_once 'users.php';
 
      $crud = new crud($pdo);
+     $user = new user($pdo);
 
+     $user->InsertUser('admin','password');
+    //echo "here";
 ?>
