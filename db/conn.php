@@ -1,7 +1,7 @@
 <?php
 
 
-  //****This is for development purposes
+  //**This is for development purposes
   /*$host = '127.0.0.1';
    $db = 'attendee_db';
    $user = 'root';
