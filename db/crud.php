@@ -75,8 +75,8 @@
            $query = "SELECT * FROM attendee WHERE attendee_id = :id";
            $stmt =$this->db->prepare($query);
            $stmt->bindparam(':id',$id);
-          $stmt->execute();
-          $res = $stmt->fetch();
+           $stmt->execute();
+           $res = $stmt->fetch();
            return  $res;
 
 
@@ -94,6 +94,27 @@
            $query = "SELECT * FROM specialties";
            $result = $this->db->query($query);
            return $result;
+       }
+	   
+	    public function getSpecialtiesId($id)
+       {
+          try{
+					 $query = "SELECT * FROM specialties WHERE specialty_id = ':id'";
+		   $stmt = $this->db->prepare($query);
+		   $stmt->bindparam(':id',$id);
+		   $stmt->execute();
+		   $result = $stmt->fetch();
+           
+		   return $result;
+
+
+		  }
+          catch(PDOExecption $err){
+
+              echo "Error: " . $err->getMessage();
+			  return false;
+			  
+		  }			 
        }
 
     public function deleteRecord($id)

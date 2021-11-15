@@ -18,7 +18,7 @@
             if($checkUser['num'] > 0)
               {
                 //return false;
-                echo "here";
+               // echo "here";
               }
             else
               {

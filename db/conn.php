@@ -34,5 +34,5 @@
      $user = new user($pdo);
 
      $user->InsertUser('admin','password');
-    //echo "here";
+
 ?>

@@ -19,16 +19,16 @@
      echo $phrase1 . ", " . $name . " " . $phrase2 ; 
 
      echo 'Uppercase first letter: ' . ucfirst($name) . "</br>";
-     echo 'Uppercase first of each words: ' . ucword($name) . "</br>";
+     echo 'Uppercase first of each words: ' . ucwords($name) . "</br>";
      echo 'Uppercase first letter: ' . strtolower("I AM SAM") . "</br>";
 
      echo "<hr/>";
 
-     echo 'Repeat String: ' . str_repeat('a') . '<br/>';
+     echo 'Repeat String: ' . str_repeat('a',4) . '<br/>';
 
      echo 'Get position of string: ' . strpos($name, 's') . "<b/>";
 
-     echo 'Find character "R" ' . strchr($name);
+     echo 'Find character "R" ' . strchr($name,"R");
 
      echo 'String lenght: ' . strlen($name) . '<br/>';
 

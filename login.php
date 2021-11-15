@@ -30,25 +30,40 @@
 
 
 ?>
-<h1><?php  echo  $title; ?></h1>
-<form action = "<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="POST">
-   <table class="table table-sm">
+<div class="container">
+  <div class="row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-6 center">
+            <h1><?php  echo  $title; ?></h1>
+            <form action = "<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="POST">
+               <table class="table table-sm">
 
-     <tr>
-        <td>
-          <label for="username">Username: *</label> 
-           <td><input type="text" name="username" class="form-control" id="username" value="<?php  if($_SERVER['REQUEST_METHOD']=='POST') echo $_POST['username']; ?>"/></td>
-          <?php  if(empty($username) && $_SERVER['REQUEST_METHOD']=='POST') echo "<p class='text-danger'>$username_error</p>"; ?>
-       </td>
-      <tr>
+                  <tr >
+                    <td class = "p-3">
+                       <label for="username">Username: *</label> 
+                       <input required type="text" name="username" class="form-control" id="username" value="<?php  if($_SERVER['REQUEST_METHOD']=='POST') echo $_POST['username']; ?>"/>
+                       <?php  if(empty($username) && $_SERVER['REQUEST_METHOD']=='POST') echo "<p class='text-danger'>$username_error</p>"; ?>
+                    </td>
+                  <tr>
 
-      <tr>
-             <td><lable for="password">Password: *</label></td>
-             <td><input type="password" name = "password"/></td>
-     </tr>
-   </table><br/><br/>
-   <input type="submit" value="login" class="btn btn-primary btn-block" />
-   <a href="#">Forgot Password</a>
-</form>
+                  <tr>                        
+                        <td class = "p-3">
+                            <lable for="password">Password: *</label>
+                           <input required type="password" name = "password" class="form-control"/>
+                        </td>
+                   </tr>
+               </table><br/><br/>
+               <input type="submit" value="login" class="btn btn-primary btn-block" />
+               <!--<button class = "btn btn-success" href="#" >Forgot Password</button>-->
+            </form>
+      </div>
+
+      <div class="col-sm-3">
+
+      </div>
+
+  </div>
+      <div>
 
 <?php include_once('includes/footer.php'); ?>

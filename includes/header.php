@@ -12,57 +12,56 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </head>
 <body>
+<div class="container-fluid">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    
-   <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">SIMO.COM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-     
-    </button>-->
+    </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <a class="navbar-brand" href="index.php">Simo.com</a>
-      <ul class="navbar-nav mr-auto me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+        <a class="nav-link active" aria-current="page" href="index.php">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="viewrecord.php">View Records</a>
+        <a class="nav-link" href="viewrecord.php">View Records</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            PHP Basics and syntax
+          PHP Basics and syntax
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="basic.php?v=IF">If Statement Example</a></li>
-            <li><a class="dropdown-item" href="basic.php?v=DT">Date Example</a></li>
-            <li><a class="dropdown-item" href="basic.php?v=FN">functions Example</a></li>
-            <li><a class="dropdown-item" href="basic.php?v=LP">loops Example</a></li>
-            <li><a class="dropdown-item" href="basic.php?v=STR">strings Example</a></li>
-            <li><a class="dropdown-item" href="basic.php?v=SWT">switchs Example</a></li>
-            <li><a class="dropdown-item" href="basic.php?v=WHL">whiles Example</a></li>
+                  <li><a class="dropdown-item" href="basic.php?v=IF">If Statement Example</a></li>
+                  <li><a class="dropdown-item" href="basic.php?v=DT">Date Example</a></li>
+                  <li><a class="dropdown-item" href="basic.php?v=FN">functions Example</a></li>
+                  <li><a class="dropdown-item" href="basic.php?v=LP">loops Example</a></li>
+                  <li><a class="dropdown-item" href="basic.php?v=STR">strings Example</a></li>
+                  <li><a class="dropdown-item" href="basic.php?v=SWT">switchs Example</a></li>
+                  <li><a class="dropdown-item" href="basic.php?v=WHL">whiles Example</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="edit.php>Edit</a>
-        </li>
+        <!--<li class="nav-item">
+                <a class="nav-link" href="edit.php">Edit</a>
+        </li>-->
       </ul>
-      <div class="navbar-nav ml-auto">
-        <?php if(!isset($_SESSION['id'])){ ?>
-            <a href="login.php" class="nav-item nav-link">Login<span class="sr-only">(current)</span></a>
-        <?php 
-        
-          } else {
-                    
-        ?>
-            <span>Hello <?php echo $_SESSION['username']; ?>  </span>
-           <a href="logout.php" class="nav-item nav-link">Logout<span class="sr-only">(current)</span></a>
-           <?php  } ?>
-      </div>
-    </div>    
-    
-  </div>
+      <ul class="navbar-na">
+             <li>
+                <?php if(!isset($_SESSION['id'])){ ?>
+                    <a href="login.php" class="nav-item nav-link">Login</a>
+                <?php 
+            
+              
+                 } else {
+                          
+                ?>
+                  <span>Hello <?php echo $_SESSION['username']; ?>  </span>
+                  <a href="logout.php" class="nav-item nav-link">Logout</a>
+                <?php  } ?>
+              </li>
+          </ul>
 
-  <div class="navbar-nav"></div>
+    </div>
+  </div>
 </nav>
-<div class="container">
